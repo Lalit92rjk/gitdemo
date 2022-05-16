@@ -1,4 +1,4 @@
-// parentelement
+/* parentelement
 
 var itemList = document.querySelector('#items');
 
@@ -39,7 +39,7 @@ console.log(itemList.previousSibling);
 
 //  previous Element sibling
 console.log(itemList.previousSibling);
-
+*/
 
 
 var newDiv  =  document.createElement('div');
@@ -54,7 +54,7 @@ var newDivText  =  document.createTextNode(' Hello World');
 
 newDiv.appendChild(newDivText);
 
-var container  =  document.querySelector('header.container');
+var container  =  document.querySelector('header .container');
 
 var h1 =  document.querySelector('header h1');
 
@@ -62,15 +62,16 @@ console.log(newDiv);
 
 container.insertBefore(newDiv,h1);
 
+
+
 parentnode = doc.getelementbyId('items');
+  
+var newDivText1  =  document.createTextNode(' Hello World');
 
-helloworldlielement  = <li> Hello World</li>;
-
-    parentNode.appendFirstChild(helloworldlielement);
+    parentNode.appendFirstChild(newDivText1 );
 
     parentNode.innerhtml = '<li>item1</li><li>item2</li><li>item3</li><li>item4</li>';
 
     parentNode.innerhtml= '<li> Hello World </li>' + parentNode.innerhtml;
-
-
-    <li class = "list-group-item"> Hello World</li>  
+    
+container.insertBefore(newDivText1,h2);
