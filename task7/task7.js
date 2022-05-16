@@ -1,4 +1,4 @@
-/* parentelement
+ parentelement
 
 var itemList = document.querySelector('#items');
 
@@ -39,7 +39,7 @@ console.log(itemList.previousSibling);
 
 //  previous Element sibling
 console.log(itemList.previousSibling);
-*/
+
 
 
 var newDiv  =  document.createElement('div');
