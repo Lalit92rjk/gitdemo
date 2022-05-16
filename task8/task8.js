@@ -2,8 +2,6 @@ var form =  document.getElementById('addForm');
 
 var itemList  =  document.getElementById('items');
 
-var filter  =  document.getElementById('filter');
-
 // form submit event
 
 form.addEventListener('submit', addItem);
@@ -12,9 +10,6 @@ form.addEventListener('submit', addItem);
 
 itemList.addEventListener('click', removeItem);
 
-//filter event
-
-filter.addEventListener('keyup', filterItems)
 // add item
 
 function addItem(e){
@@ -53,6 +48,8 @@ function addItem(e){
 
    li.appendChild(deletebtn);
 
+   // append li to list
+
    itemList.appendChild(li)
     
 
@@ -68,11 +65,4 @@ function removeItem(e){
             itemList.removeChild(li);
         }
     }
-}
-
-function filterItems(e){
-
-    var text  =  e.target.value.toLowerCase();
-
-    console.log(text);
 }
