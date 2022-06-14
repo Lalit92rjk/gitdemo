@@ -34,6 +34,9 @@
                 .catch((err)=>{
                     console.log(err)
                 })
+
+               
+
                // localStorage.setItem(obj.email, JSON.stringify(obj))
                // showNewUserOnScreen(obj)
 
@@ -41,15 +44,19 @@
             }
 
             window.addEventListener("DOMContentLoaded", () => {
-                const localStorageObj = localStorage;
-                const localstoragekeys  = Object.keys(localStorageObj)
+                axios.get("https://crudcrud.com/api/5121ca28e9cb402bb6a2ac41eb8e909e/appointmentdata")
+                .then((response)=>{
+                    //showNewUserOnScreen(response.data)
+                    console.log(response)
+                    for(var i=0;i<response.data.length;i++){
+                        showNewUserOnScreen(response.data[i]);
+                    }
+                })
+                .catch((error)=>{
+                    console.log(error)
+                })
 
-                for(var i =0; i< localstoragekeys.length; i++){
-                    const key = localstoragekeys[i]
-                    const userDetailsString = localStorageObj[key];
-                    const userDetailsObj = JSON.parse(userDetailsString);
-                    showNewUserOnScreen(userDetailsObj)
-                }
+                
             })
 
             function showNewUserOnScreen(user){
